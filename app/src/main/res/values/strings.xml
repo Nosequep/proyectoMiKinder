@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ProyectoMiKinder</string>
+
+    <!--Strings login -->
+    <string name="texto_principal">Crea tu cuenta</string>
+    <string name="button_cuenta_escolar">Cuenta \n Escolar</string>
+    <string name="button_cuenta_individual">Cuenta \n Individual</string>
+    <string name="campo_nombre">Nombre</string>
+    <string name="campo_apellido">Apellido</string>
+    <string name="campo_correo">Correo electrónico</string>
+    <string name="campo_contrasenia">Contraseña</string>
+    <string name="campo_contrasenia2">Confirmar contraseña</string>
+    <string name="boton_aceptar">Aceptar</string>
+
+    <!-- String menu-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>
