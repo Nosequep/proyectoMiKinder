@@ -11,9 +11,15 @@
     <string name="campo_contrasenia">Contraseña</string>
     <string name="campo_contrasenia2">Confirmar contraseña</string>
     <string name="boton_aceptar">Aceptar</string>
+    <string name="iniciar_sesión">Inciar sesión</string>
+    <string name="registrarse"><u>Registrarse</u></string>
 
     <!-- String menu-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Inicio -->
+    <string name="text_inicio">Inicio</string>
+
 
 </resources>

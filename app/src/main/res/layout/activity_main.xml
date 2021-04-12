@@ -18,114 +18,97 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="@string/texto_principal"
+        android:text="@string/iniciar_sesión"
         android:textAlignment="center"
         android:textColor="@color/azul"
         android:textSize="20sp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <Button
-            android:id="@+id/button"
-            android:layout_width="150dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_user"
+                android:background="@drawable/rounded_image"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_user"
+                android:background="@drawable/rounded_image"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/rounded_layout"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp">
+        <EditText
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Cuenta \nEscolar"
-            android:layout_marginRight="70dp"
+            android:layout_marginTop="@dimen/campos_texto_margin"
             android:backgroundTint="@color/azul"
-            />
-
-        <Button
-            android:id="@+id/button2"
+            android:textColor="@color/white"
+            android:background="@drawable/et_rounded"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campo_correo"
+            android:textAlignment="center"/>
+        <EditText
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Cuenta \nIndividual"
-            android:textColor="@color/azul"
-            android:backgroundTint="#c6c6c6c6"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
-            android:orientation="vertical"
-            android:gravity="center">
-            <EditText
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/et_rounded"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/campo_nombre"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-            <EditText
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/et_rounded"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/campo_apellido"/>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/campos_texto_margin"
-        android:orientation="vertical"
-        android:gravity="center">
-        <EditText
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/campos_texto_margin"
+            android:backgroundTint="@color/azul"
+            android:textColor="@color/white"
             android:background="@drawable/et_rounded"/>
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campo_contrasenia"
+            android:textAlignment="center"/>
+        <Button
+            android:id="@+id/b_registrarse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/campo_correo"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/campos_texto_margin"
-        android:orientation="vertical"
-        android:gravity="center">
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/et_rounded"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/campo_contrasenia"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/campos_texto_margin"
-        android:orientation="vertical"
-        android:gravity="center">
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/et_rounded"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/campo_contrasenia2"/>
-    </LinearLayout>
+            android:layout_gravity="end"
+            android:textStyle="italic"
+            android:background="@drawable/transparent_button"
+            android:textSize="12sp"
+            android:text="@string/registrarse"
+            android:textColor="@color/azul"/>
 
+    </LinearLayout>
     <Button
         android:id="@+id/b_aceptar"
         android:layout_width="wrap_content"
