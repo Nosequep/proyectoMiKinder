@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recursosActivity"
+    android:background="@drawable/mikinder_54">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Recursos Extra"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/FondoEscritura"
+        android:layout_width="371dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="20dp"
+        android:scaleX="1"
+        android:scaleY=".75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:srcCompat="@drawable/rectanguloazul" />
+
+    <ImageView
+        android:id="@+id/FondoMusica"
+        android:layout_width="371dp"
+        android:layout_height="203dp"
+        android:scaleX="1"
+        android:scaleY=".75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FondoEscritura"
+        app:srcCompat="@drawable/rectanguloazul" />
+
+    <ImageView
+        android:id="@+id/FondoSumas"
+        android:layout_width="371dp"
+        android:layout_height="203dp"
+        android:scaleX="1"
+        android:scaleY=".75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FondoMusica"
+        app:srcCompat="@drawable/rectanguloazul" />
+
+    <ImageView
+        android:id="@+id/Escritura1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/et_rounded"
+        app:layout_constraintBottom_toBottomOf="@+id/FondoEscritura"
+        app:layout_constraintStart_toStartOf="@+id/FondoEscritura"
+        app:layout_constraintTop_toTopOf="@+id/FondoEscritura"
+        app:srcCompat="@drawable/iconos13" />
+    <ImageView
+        android:id="@+id/Sumas"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/et_rounded"
+        app:layout_constraintBottom_toBottomOf="@+id/FondoSumas"
+        app:layout_constraintStart_toStartOf="@+id/FondoSumas"
+        app:layout_constraintTop_toTopOf="@+id/FondoSumas"
+        app:srcCompat="@drawable/iconos37" />
+    <ImageView
+        android:id="@+id/Musica"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/et_rounded"
+        app:layout_constraintBottom_toBottomOf="@+id/FondoMusica"
+        app:layout_constraintStart_toStartOf="@+id/FondoMusica"
+        app:layout_constraintTop_toTopOf="@+id/FondoMusica"
+        app:srcCompat="@drawable/iconos1" />
+
+    <TextView
+        android:id="@+id/txtEscritura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Escritura I"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FondoEscritura"
+        app:layout_constraintStart_toEndOf="@+id/Escritura1"
+        app:layout_constraintTop_toTopOf="@+id/FondoEscritura" />
+
+    <TextView
+        android:id="@+id/txtMusica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Musica"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FondoMusica"
+        app:layout_constraintStart_toEndOf="@+id/Musica"
+        app:layout_constraintTop_toBottomOf="@+id/FondoEscritura" />
+
+    <TextView
+        android:id="@+id/txtSumas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Sumas"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FondoSumas"
+        app:layout_constraintStart_toEndOf="@+id/Sumas"
+        app:layout_constraintTop_toBottomOf="@+id/FondoMusica" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/main_menu" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+
+    </LinearLayout>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
