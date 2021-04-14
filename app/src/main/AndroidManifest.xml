@@ -9,16 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoMiKinder">
-<<<<<<< HEAD
         <activity android:name=".LlamadaActivity1"></activity>
-=======
         <activity android:name=".recursosActivity"></activity>
         <activity android:name=".AgendaActivity" />
         <activity android:name=".TrofeosActivity" />
         <activity android:name=".PerfilActivity" />
->>>>>>> ef43e1e81364faf12092ec699b6d4b406b7251c5
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".InicioActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

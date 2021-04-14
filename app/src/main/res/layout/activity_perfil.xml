@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mikinder_60"
+    android:background="@drawable/fondo6"
     tools:context=".PerfilActivity">
 
     <TextView
@@ -131,6 +131,7 @@
         app:srcCompat="@drawable/iconos16"
         tools:layout_editor_absoluteX="39dp"
         tools:layout_editor_absoluteY="607dp" />
+    -->
 
     <ImageView
         android:id="@+id/imageView3"
@@ -147,6 +148,7 @@
         app:srcCompat="@drawable/iconos4"
         tools:layout_editor_absoluteX="257dp"
         tools:layout_editor_absoluteY="607dp" />
+    -->
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -157,18 +159,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/main_menu" />
+        app:menu="@menu/main_menu" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar" />
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

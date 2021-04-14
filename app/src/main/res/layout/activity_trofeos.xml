@@ -5,47 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TrofeosActivity"
-    android:background="@drawable/mikinder_58">
+    android:background="@drawable/fondo4">
 
 
     <ImageView
         android:id="@+id/trofeo3"
         android:layout_width="110dp"
         android:layout_height="116dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/et_rounded"
-        app:srcCompat="@drawable/iconos38"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="338dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconos38" />
 
     <ImageView
         android:id="@+id/trofeo2"
         android:layout_width="116dp"
         android:layout_height="113dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/et_rounded"
-        app:srcCompat="@drawable/iconos4"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="446dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trofeo1"
+        app:srcCompat="@drawable/iconos4" />
 
     <ImageView
         android:id="@+id/trofeo1"
         android:layout_width="161dp"
         android:layout_height="163dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="200dp"
         android:background="@drawable/et_rounded"
-        app:srcCompat="@drawable/iconos16"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconos16" />
 
     <TextView
         android:id="@+id/Titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="Trofeos"
-        android:textSize="30sp"
         android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="92dp" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -62,7 +70,9 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <include
             android:id="@+id/toolbar"
