@@ -4,7 +4,7 @@
         <item
             android:id="@+id/nav_perfil"
             android:title="Perfil"
-            android:icon="@drawable/iconos38"/>
+            android:icon="@drawable/niniocirculo1"/>
         <item
             android:id="@+id/nav_trofeos"
             android:title="Trofeos"
@@ -12,11 +12,11 @@
         <item
             android:id="@+id/nav_horario"
             android:title="Horario"
-            android:icon="@drawable/iconos38"/>
+            android:icon="@drawable/reloj"/>
         <item
             android:id="@+id/nav_agenda"
             android:title="Agenda"
-            android:icon="@drawable/iconos38"/>
+            android:icon="@drawable/iconos22"/>
         <item
             android:id="@+id/nav_recreo"
             android:title="Recreo"
@@ -28,7 +28,7 @@
         <item
             android:id="@+id/nav_contacto"
             android:title="Contacto"
-            android:icon="@drawable/iconos21"/>
+            android:icon="@drawable/globo"/>
 
     </group>
 

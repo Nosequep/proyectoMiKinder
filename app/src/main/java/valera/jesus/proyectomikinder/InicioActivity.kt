@@ -1,6 +1,7 @@
 package valera.jesus.proyectomikinder
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.shapes.Shape
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -43,6 +44,11 @@ class InicioActivity : AppCompatActivity() {
         var adaptador: AdaptadorClases = AdaptadorClases(this, clases)
         listview.adapter = adaptador
 
+        listview.setOnItemClickListener{ parent, view, position, id ->
+            var element = listview.getItemAtPosition(position)
+            var intent = Intent(this, LlamadaActivity1::class.java)
+            startActivity(intent)
+        }
     }
     fun obtenerFechaInicial(){
         var fecha: Calendar = Calendar.getInstance()
