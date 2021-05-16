@@ -71,6 +71,7 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <EditText
+                            android:id="@+id/et_nombre"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/et_rounded"/>
@@ -86,6 +87,7 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <EditText
+                            android:id="@+id/et_apellido"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/et_rounded"/>
@@ -103,6 +105,7 @@
                     android:orientation="vertical"
                     android:gravity="center">
                     <EditText
+                        android:id="@+id/et_correo"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/et_rounded"/>
@@ -119,6 +122,7 @@
                     android:orientation="vertical"
                     android:gravity="center">
                     <EditText
+                        android:id="@+id/et_contrasenia1"
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/et_rounded"/>
@@ -135,6 +139,7 @@
                     android:orientation="vertical"
                     android:gravity="center">
                     <EditText
+                        android:id="@+id/et_contrasenia2"
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/et_rounded"/>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "865122777037",
+    "project_id": "mikinder-f0b1d",
+    "storage_bucket": "mikinder-f0b1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865122777037:android:f34bc3f98d2af7d6073684",
+        "android_client_info": {
+          "package_name": "valera.jesus.proyectomikinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865122777037-7t9fvrjg7c9mv4h9cf1hc1kkij528tl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZWhayy8lES5AV4rMmvUQV9f0pX1baH60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865122777037-7t9fvrjg7c9mv4h9cf1hc1kkij528tl7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
