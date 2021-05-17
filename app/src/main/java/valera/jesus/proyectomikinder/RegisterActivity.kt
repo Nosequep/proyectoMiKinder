@@ -1,5 +1,6 @@
 package valera.jesus.proyectomikinder
 
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,6 +17,8 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var storage: FirebaseFirestore
     private lateinit var usuario : FirebaseAuth
 
+    private var rol: String = "alumno"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -29,6 +32,34 @@ class RegisterActivity : AppCompatActivity() {
             valida_registro()
         }
 
+        this.b_maestro.setOnClickListener {
+            this.rol = "maestro"
+            this.cambiarRol(this.rol)
+        }
+
+        this.b_alumno.setOnClickListener {
+            this.rol = "alumno"
+            this.cambiarRol(this.rol)
+        }
+    }
+
+    private fun cambiarRol(rol: String){
+        if(rol == "maestro"){
+            this.l_contenido.background = this.getDrawable(R.drawable.bloquegrisl06)
+            this.tv_nombre.setTextColor(this.resources.getColor(R.color.azul))
+            this.tv_apellido.setTextColor(this.resources.getColor(R.color.azul))
+            this.tv_correo.setTextColor(this.resources.getColor(R.color.azul))
+            this.tv_contrasenia1.setTextColor(this.resources.getColor(R.color.azul))
+            this.tv_contrasenia2.setTextColor(this.resources.getColor(R.color.azul))
+        }else{
+            this.l_contenido.background = this.getDrawable(R.drawable.bloqueazul06)
+            this.tv_nombre.setTextColor(this.resources.getColor(R.color.white))
+            this.tv_apellido.setTextColor(this.resources.getColor(R.color.white))
+            this.tv_correo.setTextColor(this.resources.getColor(R.color.white))
+            this.tv_contrasenia1.setTextColor(this.resources.getColor(R.color.white))
+            this.tv_contrasenia2.setTextColor(this.resources.getColor(R.color.white))
+
+        }
     }
 
     private fun valida_registro(){
@@ -76,7 +107,7 @@ class RegisterActivity : AppCompatActivity() {
             "apellidos" to et_apellido.text.toString(),
             "correo" to et_correo.text.toString(),
             "contrasenia" to et_contrasenia1.text.toString(),
-            "rol" to "alumno"
+            "rol" to this.rol
         )
         storage.collection("usuario")
             .add(usuario)

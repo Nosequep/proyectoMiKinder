@@ -30,33 +30,35 @@
                 android:textSize="20sp"/>
 
             <LinearLayout
+                android:id="@+id/l_contenido"
                 android:layout_width="match_parent"
                 android:layout_height="380dp"
                 android:orientation="vertical"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/fondocampos2">
+                android:background="@drawable/bloqueazul06">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center">
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/b_alumno"
                         android:layout_width="165dp"
                         android:layout_height="wrap_content"
-                        android:text="Cuenta \nEscolar"
+                        android:text="Cuenta \nAlumno"
                         android:layout_marginRight="50dp"
                         android:backgroundTint="@color/azul"
+
                         />
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/b_maestro"
                         android:layout_width="165dp"
                         android:layout_height="wrap_content"
-                        android:text="Cuenta \nIndividual"
+                        android:text="Cuenta \nMaestro"
                         android:textColor="@color/azul"
-                        android:backgroundTint="#c6c6c6c6"/>
+                        android:backgroundTint="#d6c3c3"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -71,11 +73,13 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <EditText
+                            android:paddingLeft="2dp"
                             android:id="@+id/et_nombre"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/et_rounded"/>
                         <TextView
+                            android:id="@+id/tv_nombre"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/campo_nombre"
@@ -87,11 +91,13 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <EditText
+                            android:paddingLeft="2dp"
                             android:id="@+id/et_apellido"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/et_rounded"/>
                         <TextView
+                            android:id="@+id/tv_apellido"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/campo_apellido"
@@ -105,11 +111,13 @@
                     android:orientation="vertical"
                     android:gravity="center">
                     <EditText
+                        android:paddingLeft="2dp"
                         android:id="@+id/et_correo"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/et_rounded"/>
                     <TextView
+                        android:id="@+id/tv_correo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/campo_correo"
@@ -125,8 +133,10 @@
                         android:id="@+id/et_contrasenia1"
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
+                        android:paddingLeft="2dp"
                         android:background="@drawable/et_rounded"/>
                     <TextView
+                        android:id="@+id/tv_contrasenia1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
@@ -138,12 +148,16 @@
                     android:layout_marginTop="@dimen/campos_texto_margin"
                     android:orientation="vertical"
                     android:gravity="center">
+
                     <EditText
                         android:id="@+id/et_contrasenia2"
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/et_rounded"/>
+                        android:paddingLeft="2dp"
+                        android:background="@drawable/et_rounded" />
+
                     <TextView
+                        android:id="@+id/tv_contrasenia2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/campo_contrasenia2"
