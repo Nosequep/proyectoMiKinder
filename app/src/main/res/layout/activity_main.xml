@@ -110,6 +110,7 @@
                     android:layout_marginTop="@dimen/campos_texto_margin"
                     android:backgroundTint="@color/azul"
                     android:textColor="@color/white"
+                    android:inputType="textPassword"
                     android:background="@drawable/et_rounded"/>
                 <TextView
                     android:layout_width="match_parent"
