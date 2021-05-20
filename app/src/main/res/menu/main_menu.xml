@@ -29,7 +29,10 @@
             android:id="@+id/nav_contacto"
             android:title="Contacto"
             android:icon="@drawable/globo"/>
-
+        <item
+            android:id="@+id/nav_clase"
+            android:title="Registrar clase"
+            android:icon="@drawable/niniocirculo1"/>
     </group>
 
 </menu>

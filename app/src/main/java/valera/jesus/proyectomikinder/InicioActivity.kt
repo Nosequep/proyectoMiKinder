@@ -11,15 +11,25 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.widget.Toolbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_inicio.*
 import java.util.*
 
 class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    var clases = ArrayList<Clase>()
+    private lateinit var clases: ArrayList<Clase>
+    private var adaptador: AdaptadorClases? = null
+    private lateinit var storage: FirebaseFirestore
+    private lateinit var usuario: FirebaseAuth
+    var rol: String = "alumno"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)
-
+        this.clases = ArrayList<Clase>()
+        storage = FirebaseFirestore.getInstance()
+        usuario = FirebaseAuth.getInstance()
         var drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         var toolbar: Toolbar = findViewById(R.id.toolbar)
 
@@ -32,22 +42,22 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
        toggle.syncState()
         */
         this.obtenerFechaInicial()
-        this.agregarClases()
+        fillTasks()
 
-        var listview: ListView = findViewById(R.id.listview)
-        var adaptador: AdaptadorClases = AdaptadorClases(this, clases)
-        listview.adapter = adaptador
 
-        listview.setOnItemClickListener{ parent, view, position, id ->
+
+        this.listview.setOnItemClickListener{ parent, view, position, id ->
             var element = listview.getItemAtPosition(position)
             var intent = Intent(this, LlamadaActivity1::class.java)
             startActivity(intent)
         }
 
-        var nav_view: NavigationView = findViewById(R.id.navigator)
-        nav_view.bringToFront()
+        this.isMaestro()
+        this.navigator.bringToFront()
 
-        nav_view.setNavigationItemSelectedListener { item ->
+
+
+        this.navigator.setNavigationItemSelectedListener { item ->
             var intent: Intent
             when (item.itemId) {
                 R.id.nav_perfil -> {
@@ -70,7 +80,14 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     intent = Intent(this, recursosActivity::class.java)
                     startActivity(intent)
                 }
+                R.id.nav_clase ->{
+                    intent = Intent(this, RegistrarClase::class.java)
+                    startActivity(intent)
+                }
+
+
             }
+
             true
         }
 
@@ -81,6 +98,7 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
         return true
     }
+
 
     fun obtenerFechaInicial(){
         var fecha: Calendar = Calendar.getInstance()
@@ -140,10 +158,25 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         }
         return ""
     }
-    fun agregarClases(){
-        clases.add(Clase("Matemáticas", "8:30 a.m.", "Mtra. Natalia", 1))
-        clases.add(Clase("Escritura", "10:00 a.m.", "Mtra. Agustina", 2))
-        clases.add(Clase("Musica", "12 p.m.", "Mtra. Sofía", 3))
+
+    fun fillTasks(){
+        storage.collection("clases")
+                .get()
+                .addOnSuccessListener {
+                    it.forEach {
+                        var alumnos: ArrayList<String> = it.get("alumnos") as ArrayList<String>
+                        if(alumnos.contains(this.usuario.currentUser.email)){
+                            clases!!.add(Clase(it.getString("materia")!!, it.getString("hora")!!, it.getString("maestro")!!, 0))
+                        }
+
+                    }
+                    this.adaptador = AdaptadorClases(this, clases)
+                    this.listview.adapter = adaptador
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this, "Error: intente de nuevo", Toast.LENGTH_SHORT).show()
+                }
+
     }
 
     private class AdaptadorClases: BaseAdapter {
@@ -183,6 +216,37 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         override fun getCount(): Int {
             return this.clases.size
         }
+    }
+
+    private fun isMaestro(){
+        storage.collection("usuario")
+                .whereEqualTo("correo", usuario.currentUser.email)
+                .get()
+                .addOnSuccessListener {
+
+                    it.forEach {
+
+                        if(it.getString("rol") == "maestro"){
+                            Toast.makeText(this, "Rol " + it.getString("rol"), Toast.LENGTH_SHORT).show()
+
+                            this.navigator.menu.removeItem(R.id.nav_perfil)
+                            this.navigator.menu.removeItem(R.id.nav_recursos)
+                            this.navigator.menu.removeItem(R.id.nav_trofeos)
+                            this.navigator.menu.removeItem(R.id.nav_agenda)
+                            this.navigator.menu.removeItem(R.id.nav_contacto)
+                            this.navigator.menu.removeItem(R.id.nav_horario)
+                            this.navigator.menu.removeItem(R.id.nav_recreo)
+                        }else{
+                            this.navigator.menu.removeItem(R.id.nav_clase)
+                        }
+                    }
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this, "Error: intente de nuevo", Toast.LENGTH_SHORT).show()
+
+                }
+
+
     }
 
 

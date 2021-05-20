@@ -92,7 +92,7 @@
                 android:paddingTop="20dp">
                 <EditText
                     android:id="@+id/et_correo"
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/campos_texto_margin"
                     android:backgroundTint="@color/azul"

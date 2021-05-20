@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo2"
+    tools:context=".RegistrarClase">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/azul"
+        android:text = "Registrar clase"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <EditText
+            android:id="@+id/et_materia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Materia"
+            android:background="@drawable/et_rounded"
+            android:padding="4dp"/>
+        <EditText
+            android:id="@+id/et_maestro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Maestro"
+            android:background="@drawable/et_rounded"
+            android:padding="4dp"/>
+        <Button
+            android:id="@+id/btn_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Hora"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="@color/azul"
+
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <EditText
+            android:id="@+id/et_correos"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:inputType="text|textMultiLine"
+            android:gravity="top"
+            android:hint="Correos - ejemplo: prueba1@gamil.com, prueba2@gmail"
+            android:background="@drawable/et_rounded"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/b_crear"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Crear"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/azul"/>
+
+</LinearLayout>
