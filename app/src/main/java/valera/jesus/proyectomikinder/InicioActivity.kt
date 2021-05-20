@@ -219,7 +219,7 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     }
 
     private fun isMaestro(){
-        storage.collection("usuario")
+        storage.collection("usuarios")
                 .whereEqualTo("correo", usuario.currentUser.email)
                 .get()
                 .addOnSuccessListener {

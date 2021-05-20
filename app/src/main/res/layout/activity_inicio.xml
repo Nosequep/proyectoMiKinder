@@ -20,36 +20,36 @@
         app:menu="@menu/main_menu"
         android:layout_gravity="start"/>
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_inicio"
+            android:textSize="40dp"
+            android:textColor="@color/azul"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tv_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fecha"
+            android:textSize="20dp"
+            android:textColor="@color/amarillo"
+            android:textAlignment="center"/>
+        <ListView
+            android:id="@+id/listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-            <include
-                android:id="@+id/toolbar"
-                layout="@layout/toolbar"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/text_inicio"
-                android:textSize="40dp"
-                android:textColor="@color/azul"
-                android:textAlignment="center"/>
-
-            <TextView
-                android:id="@+id/tv_fecha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="fecha"
-                android:textSize="20dp"
-                android:textColor="@color/amarillo"
-                android:textAlignment="center"/>
-            <ListView
-                android:id="@+id/listview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:divider="@null"/>
-        </LinearLayout>
+            android:divider="@null"/>
+    </LinearLayout>
 
 
 

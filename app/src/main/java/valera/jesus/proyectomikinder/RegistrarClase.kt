@@ -3,6 +3,7 @@ package valera.jesus.proyectomikinder
 import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -14,6 +15,7 @@ import java.util.*
 class RegistrarClase : AppCompatActivity() {
     private lateinit var storage: FirebaseFirestore
     private lateinit var usuario : FirebaseAuth
+    private lateinit var alumnos: ArrayList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,13 +41,23 @@ class RegistrarClase : AppCompatActivity() {
                     cal.get(Calendar.MINUTE), true).show()
 
         }
+
+        alumnos= ArrayList<String>()
+        var ADP: ArrayAdapter<String> = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, alumnos)
+        this.lv_alumnos.adapter = ADP
+        this.b_agregar.setOnClickListener {
+            alumnos.add(this.et_correoAlumno.text.toString())
+            ADP.notifyDataSetChanged()
+            this.et_correoAlumno.setText("")
+        }
+
     }
 
     private fun valida_registro(){
         var materia: String = et_materia.text.toString()
         var maestro: String = et_maestro.text.toString()
         var hora: String = btn_time.text.toString()
-        var correos: String = et_correos.text.toString()
+        //var correos: String = et_correos.text.toString()
 
         if(!materia.isNullOrBlank() && !maestro.isNullOrBlank() && !hora.isNullOrBlank()){
 
@@ -56,9 +68,7 @@ class RegistrarClase : AppCompatActivity() {
 
     }
 
-    private fun obtenerCorreos() : List<String>{
-        return this.et_correos.text.toString().split(",")
-    }
+
 
     private fun registrarClase(){
 
@@ -66,7 +76,7 @@ class RegistrarClase : AppCompatActivity() {
             "maestro" to et_maestro.text.toString(),
             "materia" to et_materia.text.toString(),
             "hora" to btn_time.text.toString(),
-            "alumnos" to this.obtenerCorreos()
+            "alumnos" to this.alumnos
         )
         storage.collection("clases")
             .add(clase)

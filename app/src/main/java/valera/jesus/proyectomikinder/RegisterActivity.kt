@@ -4,12 +4,14 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_register.*
+
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -28,6 +30,9 @@ class RegisterActivity : AppCompatActivity() {
         storage = FirebaseFirestore.getInstance()
         //conexion al usuario gmail
         usuario = FirebaseAuth.getInstance()
+
+
+
         this.b_registrarse.setOnClickListener{
             valida_registro()
         }
@@ -41,6 +46,7 @@ class RegisterActivity : AppCompatActivity() {
             this.rol = "alumno"
             this.cambiarRol(this.rol)
         }
+
     }
 
     private fun cambiarRol(rol: String){
@@ -107,9 +113,10 @@ class RegisterActivity : AppCompatActivity() {
             "apellidos" to et_apellido.text.toString(),
             "correo" to et_correo.text.toString(),
             "contrasenia" to et_contrasenia1.text.toString(),
-            "rol" to this.rol
+            "rol" to this.rol,
+            "fechaNacimiento" to "19 - Abril - 2015"
         )
-        storage.collection("usuario")
+        storage.collection("usuarios")
             .add(usuario)
             .addOnSuccessListener {
                 Toast.makeText(baseContext, "Se ha registrado satisfactoriamente.",
