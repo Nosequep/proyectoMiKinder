@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoMiKinder">
-        <activity android:name=".RegistrarClase">
-        </activity>
+        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".MaestrosActivity" />
+        <activity android:name=".ContactoActivity" />
+        <activity android:name=".RecreoActivity" />
+        <activity android:name=".RegistrarClase" />
         <activity android:name=".LlamadaActivity1" />
         <activity android:name=".recursosActivity" />
         <activity android:name=".AgendaActivity" />
@@ -19,13 +22,11 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".InicioActivity" />
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

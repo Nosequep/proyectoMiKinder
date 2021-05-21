@@ -34,7 +34,7 @@ class PerfilActivity : AppCompatActivity() {
             .addOnSuccessListener {
 
                 it.forEach {
-                    this.nombre.text = it.getString("nombre")
+                    this.nombre.text = it.getString("nombres") + " "  + it.getString("apellidos")
                     this.correo.text = it.getString("correo")
                     this.fechaNac.text = it.getString("fechaNacimiento")
 

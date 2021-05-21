@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo6"
-    tools:context=".InicioActivity"
+    tools:context=".PerfilActivity"
     android:fitsSystemWindows="true"
-    tools:openDrawer="star">
+    tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigator"
@@ -80,10 +80,13 @@
             android:layout_marginLeft="20dp">
             <TextView
                 android:id="@+id/nombre"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
                 android:text="Maria Ines Hernandez Esquer"
+                android:textAlignment="center"
                 android:textColor="@color/azul"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -101,9 +104,12 @@
 
             <TextView
                 android:id="@+id/fechaNac"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textAlignment="center"
                 android:text="19 - Abril - 2015"
                 android:textColor="@color/azul"
                 android:background="@color/amarillo"
@@ -122,9 +128,12 @@
 
             <TextView
                 android:id="@+id/correo"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
                 android:text="manuelhdze@gmail.com"
                 android:textColor="@color/azul"
                 android:background="@color/amarillo"
