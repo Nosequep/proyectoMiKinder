@@ -68,8 +68,12 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     intent = Intent(this, TrofeosActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.nav_horario -> {
-                    intent = Intent(this, TrofeosActivity::class.java)
+                R.id.nav_recreo -> {
+                    intent = Intent(this, RecreoActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_contacto -> {
+                    intent = Intent(this, ContactoActivity::class.java)
                     startActivity(intent)
                 }
                 R.id.nav_agenda -> {
