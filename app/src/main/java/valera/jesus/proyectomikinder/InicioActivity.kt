@@ -2,12 +2,10 @@ package valera.jesus.proyectomikinder
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.shapes.Shape
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
 import android.widget.*
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.widget.Toolbar

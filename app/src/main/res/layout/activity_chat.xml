@@ -102,6 +102,7 @@
                 android:id="@+id/mensaje"
                 android:layout_width="0dp"
                 android:layout_weight="5"
+                android:hint="Enviar mensaje"
                 android:layout_height="wrap_content"/>
             <ImageButton
                 android:id="@+id/enviar"

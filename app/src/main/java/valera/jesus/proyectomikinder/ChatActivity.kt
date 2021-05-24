@@ -20,6 +20,7 @@ class ChatActivity : AppCompatActivity() {
 
         enviar.setOnClickListener{
             if(!mensaje.text.isEmpty()){
+                mensaje.setText("")
                 mensajes.setText(mensaje.text.toString())
                 registrarMensaje(mensajes.text.toString())
             }else{
