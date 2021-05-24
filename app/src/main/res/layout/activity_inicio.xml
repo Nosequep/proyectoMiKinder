@@ -34,7 +34,8 @@
             android:text="@string/text_inicio"
             android:textSize="40dp"
             android:textColor="@color/azul"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/tv_fecha"

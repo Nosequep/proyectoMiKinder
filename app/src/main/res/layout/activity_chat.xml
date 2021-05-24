@@ -60,11 +60,11 @@
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp">
             <ImageButton
-                android:id="@+id/im_maestra1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/amarillo"
-                android:background="@color/amarillo"/>
+                android:scaleType="fitCenter"
+                android:background="@drawable/rounded_image"
+                android:src="@drawable/circulomaestra3"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -8,7 +8,7 @@
     android:background="@drawable/fondo8"
     tools:context=".RecreoActivity"
     android:fitsSystemWindows="true"
-    tools:openDrawer="star">
+    tools:openDrawer="start">
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigator"
         android:layout_width="wrap_content"

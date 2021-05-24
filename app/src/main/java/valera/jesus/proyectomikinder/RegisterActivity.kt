@@ -1,5 +1,6 @@
 package valera.jesus.proyectomikinder
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.activity_register.b_regresar
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -45,6 +47,10 @@ class RegisterActivity : AppCompatActivity() {
         this.b_alumno.setOnClickListener {
             this.rol = "alumno"
             this.cambiarRol(this.rol)
+        }
+        b_regresar.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
     }

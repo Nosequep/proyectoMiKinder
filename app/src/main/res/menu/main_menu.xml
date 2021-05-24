@@ -33,6 +33,10 @@
             android:id="@+id/nav_clase"
             android:title="Registrar clase"
             android:icon="@drawable/niniocirculo1"/>
+        <item
+            android:id="@+id/nav_cerrarSesion"
+            android:title="Cerrar Sesión"
+            android:icon="@drawable/niniocirculo1"/>
     </group>
 
 </menu>

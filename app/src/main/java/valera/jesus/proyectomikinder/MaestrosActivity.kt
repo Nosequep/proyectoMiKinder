@@ -13,5 +13,10 @@ class MaestrosActivity : AppCompatActivity() {
             var intent = Intent(this, ContactoActivity::class.java)
             startActivity(intent)
         }
+
+        this.im_maestra1.setOnClickListener {
+            var intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -88,6 +88,10 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     intent = Intent(this, RegistrarClase::class.java)
                     startActivity(intent)
                 }
+                R.id.nav_cerrarSesion ->{
+                    intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
 
 
             }

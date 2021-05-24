@@ -13,5 +13,9 @@ class ContactoActivity : AppCompatActivity() {
             var intent = Intent(this, InicioActivity::class.java)
             startActivity(intent)
         }
+        this.b_aceptar.setOnClickListener {
+            var intent = Intent(this, MaestrosActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

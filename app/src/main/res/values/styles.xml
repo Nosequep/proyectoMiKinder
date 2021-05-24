@@ -4,5 +4,6 @@
         <item name="colorPrimary">@color/rosa</item>
         <item name="colorPrimaryDark">@color/rosa</item>
         <item name="colorAccent">@color/rosa</item>
+        <item name="android:fontFamily">@font/milkynice</item>
     </style>
 </resources>

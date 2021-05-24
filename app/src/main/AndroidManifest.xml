@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoMiKinder">
-        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".MostrarRecurso"></activity>
+        <activity android:name=".ChatActivity" />
         <activity android:name=".MaestrosActivity" />
         <activity android:name=".ContactoActivity" />
         <activity android:name=".RecreoActivity" />

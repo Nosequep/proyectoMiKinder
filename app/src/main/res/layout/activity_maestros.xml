@@ -67,8 +67,9 @@
                     android:id="@+id/im_maestra1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/amarillo"
-                    android:background="@color/amarillo"/>
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/rounded_image"
+                    android:src="@drawable/circulomaestra3"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -89,8 +90,9 @@
                     android:id="@+id/im_maestra2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/amarillo"
-                    android:background="@color/amarillo"/>
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/rounded_image"
+                    android:src="@drawable/circulomaestra4"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -111,8 +113,9 @@
                     android:id="@+id/im_maestra3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/amarillo"
-                    android:background="@color/amarillo"/>
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/rounded_image"
+                    android:src="@drawable/circulomaestra5"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -133,8 +136,9 @@
                     android:id="@+id/im_maestra4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/amarillo"
-                    android:background="@color/amarillo"/>
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/rounded_image"
+                    android:src="@drawable/circulomaestra6"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

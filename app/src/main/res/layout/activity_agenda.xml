@@ -8,7 +8,7 @@
     android:background="@drawable/fondo2"
     tools:context=".AgendaActivity"
     android:fitsSystemWindows="true"
-    tools:openDrawer="star">
+    tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
