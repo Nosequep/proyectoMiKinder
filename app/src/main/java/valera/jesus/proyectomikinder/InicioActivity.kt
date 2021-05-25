@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
 import android.widget.*
-import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import androidx.appcompat.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_inicio.*
@@ -19,7 +17,6 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     private var adaptador: AdaptadorClases? = null
     private lateinit var storage: FirebaseFirestore
     private lateinit var usuario: FirebaseAuth
-    var rol: String = "alumno"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +25,6 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         this.clases = ArrayList<Clase>()
         storage = FirebaseFirestore.getInstance()
         usuario = FirebaseAuth.getInstance()
-        var drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        var toolbar: Toolbar = findViewById(R.id.toolbar)
 
 
         //Toolbar action
@@ -45,8 +40,7 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
         this.listview.setOnItemClickListener{ parent, view, position, id ->
-            var element = listview.getItemAtPosition(position)
-            var intent = Intent(this, LlamadaActivity1::class.java)
+            val intent = Intent(this, LlamadaActivity1::class.java)
             startActivity(intent)
         }
 
@@ -56,7 +50,7 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
         this.navigator.setNavigationItemSelectedListener { item ->
-            var intent: Intent
+            val intent: Intent
             when (item.itemId) {
                 R.id.nav_perfil -> {
                     intent = Intent(this, PerfilActivity::class.java)
@@ -107,14 +101,14 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
     fun obtenerFechaInicial(){
-        var fecha: Calendar = Calendar.getInstance()
+        val fecha: Calendar = Calendar.getInstance()
 
-        var tv_fecha: TextView = findViewById(R.id.tv_fecha)
-        var dia: String = this.obtenerDiaSemana(fecha.get(Calendar.DAY_OF_WEEK))
-        var diaM: String = fecha.get(Calendar.DAY_OF_MONTH).toString()
-        var mes: String = this.obtenerMes(fecha.get(Calendar.MONTH))
+        val tv_fecha: TextView = findViewById(R.id.tv_fecha)
+        val dia: String = this.obtenerDiaSemana(fecha.get(Calendar.DAY_OF_WEEK))
+        val diaM: String = fecha.get(Calendar.DAY_OF_MONTH).toString()
+        val mes: String = this.obtenerMes(fecha.get(Calendar.MONTH))
         //El mes empieza desde el 0
-        tv_fecha.setText("${dia} ${diaM} de ${mes}")
+        tv_fecha.setText(dia + " " + diaM + " de " +mes)
     }
 
     fun obtenerDiaSemana(dia: Int) : String{
@@ -170,7 +164,7 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 .get()
                 .addOnSuccessListener {
                     it.forEach {
-                        var alumnos: ArrayList<String> = it.get("alumnos") as ArrayList<String>
+                        val alumnos: ArrayList<String> = it.get("alumnos") as ArrayList<String>
                         if(alumnos.contains(this.usuario.currentUser.email)){
                             clases!!.add(Clase(it.getString("materia")!!, it.getString("hora")!!, it.getString("maestro")!!, 0))
                         }
@@ -195,14 +189,13 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            var clase = clases[position]
-            var inflador = LayoutInflater.from(contexto)
-            var vista = inflador.inflate(R.layout.clase_view, null)
+            val clase = clases[position]
+            val inflador = LayoutInflater.from(contexto)
+            val vista = inflador.inflate(R.layout.clase_view, null)
 
-            var image = vista.findViewById(R.id.iv_icono) as ImageView
-            var materia = vista.findViewById(R.id.tv_materia) as TextView
-            var hora = vista.findViewById(R.id.tv_hora) as TextView
-            var maestro = vista.findViewById(R.id.tv_maestro) as TextView
+            val materia = vista.findViewById(R.id.tv_materia) as TextView
+            val hora = vista.findViewById(R.id.tv_hora) as TextView
+            val maestro = vista.findViewById(R.id.tv_maestro) as TextView
 
             materia.setText(clase.materia)
             hora.setText(clase.hora)
