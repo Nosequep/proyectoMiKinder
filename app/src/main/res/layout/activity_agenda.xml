@@ -8,7 +8,7 @@
     android:background="@drawable/fondo2"
     tools:context=".AgendaActivity"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="star">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -63,75 +63,14 @@
                 android:textColor="@color/azul"
                 android:gravity="center"/>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/imageView"
+        <ListView
+            android:layout_marginTop="20dp"
+            android:id="@+id/listview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/rectangulo_agenda"
-            android:orientation="vertical"
+            android:divider="@null">
 
-            android:padding="25dp">
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/azul"
-                android:text="Lunes 19 de abril" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <ImageButton
-                    android:id="@+id/lectura"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:scaleType="fitCenter"
-                    android:background="@drawable/rounded_image"
-                    android:backgroundTint="@color/white"
-                    android:src="@drawable/iconos13" />
-                <ImageButton
-                    android:id="@+id/matematicas"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:scaleType="fitCenter"
-                    android:layout_marginStart="28dp"
-                    android:background="@drawable/rounded_image"
-                    android:backgroundTint="@color/white"
-                    android:src="@drawable/iconos37"/>
-
-                <ImageButton
-                    android:id="@+id/musica"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:scaleType="fitCenter"
-                    android:layout_marginStart="28dp"
-                    android:background="@drawable/rounded_image"
-                    android:backgroundTint="@color/white"
-                    android:src="@drawable/iconos1"/>
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/firmaTutor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:text="Firma padre de familia"
-                android:textStyle="bold"
-                android:textSize="12sp"
-                android:textColor="@color/black" />
-        </LinearLayout>
+        </ListView>
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

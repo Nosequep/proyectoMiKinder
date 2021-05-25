@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo2"
+    tools:context=".RegistrarAgendaActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textColor="@color/azul"
+                android:text = "Registrar actividad"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha limite:"
+                        android:layout_gravity="center_vertical"/>
+                    <Button
+                        android:id="@+id/btn_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Hora"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textColor="@color/azul"
+
+                        android:background="?android:attr/selectableItemBackground"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text = "Actividades"
+                    android:textColor="@color/azul"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"/>
+                <CheckBox
+                    android:id="@+id/cb_musica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Música"/>
+                <CheckBox
+                    android:id="@+id/cb_matematicas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matemáticas"/>
+                <CheckBox
+                    android:id="@+id/cb_espanol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Español"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text = "Alumnos"
+                    android:textColor="@color/azul"
+                    android:textAlignment="textStart"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_correoAlumno"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:hint="Correo"
+                        android:background="@drawable/et_rounded"
+                        android:padding="4dp"/>
+                    <Button
+                        android:id="@+id/b_agregar"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Agregar"
+                        android:backgroundTint="@color/azul"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <ListView
+                    android:id="@+id/lv_alumnos"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@color/amarillo"/>
+                <!--
+                <EditText
+                    android:id="@+id/et_correos"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:inputType="text|textMultiLine"
+                    android:gravity="top"
+                    android:hint="Correos - ejemplo: prueba1@gamil.com, prueba2@gmail"
+                    android:background="@drawable/et_rounded"
+                    android:padding="4dp"/>
+                -->
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/b_crear"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Crear"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/azul"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

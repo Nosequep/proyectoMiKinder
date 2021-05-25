@@ -88,10 +88,15 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     intent = Intent(this, RegistrarClase::class.java)
                     startActivity(intent)
                 }
+                R.id.nav_registrarActividad ->{
+                    intent = Intent(this, RegistrarAgendaActivity::class.java)
+                    startActivity(intent)
+                }
                 R.id.nav_cerrarSesion ->{
                     intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }
+
 
 
             }
@@ -244,8 +249,10 @@ class InicioActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                             this.navigator.menu.removeItem(R.id.nav_contacto)
                             this.navigator.menu.removeItem(R.id.nav_horario)
                             this.navigator.menu.removeItem(R.id.nav_recreo)
+
                         }else{
                             this.navigator.menu.removeItem(R.id.nav_clase)
+                            this.navigator.menu.removeItem(R.id.nav_registrarActividad)
                         }
                     }
                 }
