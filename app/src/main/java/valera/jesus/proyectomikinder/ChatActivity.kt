@@ -35,7 +35,7 @@ class ChatActivity : AppCompatActivity() {
     fun registrarMensaje(mensaje:String){
         val mensajes = hashMapOf(
             "alumno" to usuario.currentUser.email.toString(),
-            "maestro" to et_nombre.toString(),
+            "maestro" to "maestro1@gmail.com",
             "mensaje" to mensaje
         )
         storage.collection("chat")
