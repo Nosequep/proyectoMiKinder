@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="60dp"
-                android:text="Chat maestros"
+                android:text="Chat"
                 android:textSize="40sp"
                 android:textColor="@color/white"
                 android:gravity="center"/>
@@ -66,6 +66,7 @@
                 android:background="@drawable/rounded_image"
                 android:src="@drawable/circulomaestra3"/>
             <TextView
+                android:id="@+id/et_nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mtra. Natalia Lugo"
@@ -74,13 +75,21 @@
                 android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_maestros"
-            android:layout_marginBottom="10dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/campoMensajes">
+            <TextView
+                android:id="@+id/mensajes"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_maestros"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,18 +99,19 @@
             android:layout_marginLeft="20dp"
             android:padding="5dp">
             <EditText
+                android:id="@+id/mensaje"
                 android:layout_width="0dp"
                 android:layout_weight="5"
                 android:layout_height="wrap_content"/>
             <ImageButton
+                android:id="@+id/enviar"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/azul"
                 android:background="@drawable/ic_baseline_navigate_before_24"
                 android:rotationY="180"/>
-
-
         </LinearLayout>
     </LinearLayout>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

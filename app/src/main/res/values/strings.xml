@@ -13,6 +13,7 @@
     <string name="boton_aceptar">Aceptar</string>
     <string name="iniciar_sesión">Inciar sesión</string>
     <string name="registrarse"><u>Registrarse</u></string>
+    <string name="nombre"> </string>
 
     <!-- String menu-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
